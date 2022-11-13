@@ -1,14 +1,14 @@
 {
-  "name": "e93c7b0b7e812903",
-  "main": "e93c7b0b7e812903@358.js",
+  "name": "dcef123c394a46b4",
+  "main": "dcef123c394a46b4@358.js",
   "version": "358.0.0",
-  "homepage": "https://observablehq.com/d/e93c7b0b7e812903",
+  "homepage": "https://observablehq.com/d/dcef123c394a46b4",
   "author": {
     "name": "KevayneCst",
     "url": "https://observablehq.com/@kevaynecst"
   },
   "type": "module",
   "peerDependencies": {
-    "@observablehq/runtime": "4"
+    "@observablehq/runtime": "4 - 5"
   }
 }

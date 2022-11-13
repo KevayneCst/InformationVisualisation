@@ -1,6 +1,6 @@
 # Zoomable Sunburst
 
-https://observablehq.com/d/e93c7b0b7e812903@358
+https://observablehq.com/d/dcef123c394a46b4@358
 
 View this notebook in your browser by running a web server in this folder. For
 example:
@@ -13,15 +13,15 @@ Or, use the [Observable Runtime](https://github.com/observablehq/runtime) to
 import this module directly into your application. To npm install:
 
 ~~~sh
-npm install @observablehq/runtime@4
-npm install https://api.observablehq.com/d/e93c7b0b7e812903@358.tgz?v=3
+npm install @observablehq/runtime@5
+npm install https://api.observablehq.com/d/dcef123c394a46b4@358.tgz?v=3
 ~~~
 
 Then, import your notebook and the runtime as:
 
 ~~~js
 import {Runtime, Inspector} from "@observablehq/runtime";
-import define from "e93c7b0b7e812903";
+import define from "dcef123c394a46b4";
 ~~~
 
 To log the value of the cell named “foo”:

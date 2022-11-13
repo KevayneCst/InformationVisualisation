@@ -1,5 +1,5 @@
 function _1(md){return(
-md`# Zoomable Sunburst of musical genre containing explicit lyrics
+md`# Zoomable Sunburst
 
 This variant of a [sunburst diagram](/@d3/sunburst) shows only two layers of the hierarchy at a time. Click a node to zoom in, or the center to zoom out. Compare to an [icicle](/@d3/zoomable-icicle).`
 )}
@@ -107,7 +107,7 @@ function _chart(partition,data,d3,width,color,arc,format,radius)
 
 
 function _data(FileAttachment){return(
-FileAttachment("data.json").json()
+FileAttachment("ebe8dd96a4ce7e7398ac2567869f17e30d2701e89f601199a4e2612512793c74a470bab719cd4ae73a8a0e5e585f14e94aad5b6c9e546e04696da0a56044b865.json").json()
 )}
 
 function _partition(d3){return(
@@ -151,7 +151,7 @@ export default function define(runtime, observer) {
   const main = runtime.module();
   function toString() { return this.url; }
   const fileAttachments = new Map([
-    ["data.json", {url: new URL("./files/ebe8dd96a4ce7e7398ac2567869f17e30d2701e89f601199a4e2612512793c74a470bab719cd4ae73a8a0e5e585f14e94aad5b6c9e546e04696da0a56044b865.json", import.meta.url), mimeType: "application/json", toString}]
+    ["ebe8dd96a4ce7e7398ac2567869f17e30d2701e89f601199a4e2612512793c74a470bab719cd4ae73a8a0e5e585f14e94aad5b6c9e546e04696da0a56044b865.json", {url: new URL("./files/58917fb8f299a18c4d18ea2579cfa753e102f4fb1a6e08d0e86602d9c48777157cdbc2504940d07df3403123b070ec29272ba39a1ec5f3958ecd045f9c591fe2.json", import.meta.url), mimeType: "application/json", toString}]
   ]);
   main.builtin("FileAttachment", runtime.fileAttachments(name => fileAttachments.get(name)));
   main.variable(observer()).define(["md"], _1);
