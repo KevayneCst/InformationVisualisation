@@ -1,0 +1,149 @@
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<!-- Styles -->
+<style>
+    body, html{
+        background: #181E24;
+        padding-top: 10px;
+    }
+
+    .wrapper{
+        width:60%;
+        display:block;
+        overflow:hidden;
+        margin:0 auto;
+        padding: 60px 50px;
+        background:#fff;
+        border-radius:4px;
+    }
+
+    canvas{
+        background:#fff;
+        height:400px;
+    }
+
+    h1{
+        font-family: Roboto;
+        color: #fff;
+        margin-top:50px;
+        font-weight:200;
+        text-align: center;
+        display: block;
+        text-decoration: none;
+    }
+</style>
+
+<!-- Resources -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js" integrity="sha512-hZf9Qhp3rlDJBvAKvmiG+goaaKRZA6LKUO35oK6EsM0/kjPK32Yw7URqrq3Q+Nvbbt8Usss+IekL7CRn83dYmw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<h1>Graphique représentant le caractère des chansons par artiste</h1>
+<div class="wrapper">
+    <canvas id="myChart4"></canvas>
+</div>
+
+
+<!-- Chart code -->
+<script>
+    let songs = [];
+    let songsSorted = [];
+
+    function generateChart() {
+        console.log(songsSorted)
+        var ctx = document.getElementById("myChart4").getContext('2d');
+        let labels = [];
+        let explicit = [];
+        let notExplicit = [];
+        let unknown = [];
+        for (let i = 0; i < 10; ++i) {
+            labels.push(songsSorted[i]["name"])
+            unknown.push(songsSorted[i]["unk"])
+            explicit.push(songsSorted[i]["True"])
+            notExplicit.push(songsSorted[i]["False"])
+        }
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [
+                    {
+                        label: 'Unknown',
+                        backgroundColor: "#808080",
+                        data: unknown,
+                    },
+                    {
+                        label: 'Not Explicit',
+                        backgroundColor: "#087f8c",
+                        data: notExplicit,
+                    },
+                    {
+                        label: 'Explicit',
+                        backgroundColor: "#fc0b03",
+                        data: explicit,
+                    }],
+            },
+            options: {
+                tooltips: {
+                    displayColors: true,
+                    callbacks:{
+                        mode: 'x',
+                    },
+                },
+                scales: {
+                    xAxes: [{
+                        stacked: true,
+                        gridLines: {
+                            display: false,
+                        }
+                    }],
+                    yAxes: [{
+                        stacked: true,
+                        ticks: {
+                            beginAtZero: true,
+                        },
+                        type: 'linear',
+                    }]
+                },
+                responsive: true,
+                maintainAspectRatio: false,
+                legend: { position: 'bottom' },
+            }
+        });
+    }
+
+    function getSongs() {
+        return $.getJSON('artists.json', function(data) {
+            $.each( data, function( key, val ) {
+                if (songs[val.artist_id] === undefined) {
+                    songs[val.artist_id] = []
+                    songs[val.artist_id]["name"] = val.artist_name;
+                    songs[val.artist_id]["unk"] = 0
+                    songs[val.artist_id]["True"] = 0
+                    songs[val.artist_id]["False"] = 0
+                    songs[val.artist_id]["total"] = 0
+                }
+                songs[val.artist_id][val.explicit_lyrics] += 1;
+                songs[val.artist_id]["total"] += 1;
+            });
+            for(let s in songs) {
+                //let statsArtist = [songs[s]["name"], songs[s]["nb_songs"]]
+                let statsArtist = [];
+                statsArtist["name"] = songs[s]["name"];
+                statsArtist["unk"] = songs[s]["unk"]
+                statsArtist["True"] = songs[s]["True"]
+                statsArtist["False"] = songs[s]["False"]
+                statsArtist["total"] = songs[s]["total"]
+                songsSorted.push(statsArtist)
+            }
+            songsSorted = songsSorted.sort(function (a,b) {
+                return b["total"] - a["total"]
+            })
+        }).done(function() {
+            generateChart();
+        });
+    }
+
+
+
+    getSongs()
+
+</script>
