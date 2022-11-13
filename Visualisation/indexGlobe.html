@@ -1,0 +1,287 @@
+<!-- Styles -->
+<style>
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    }
+
+    #chartdiv {
+        margin-top: 2%;
+        margin-bottom: 5%;
+        width: 100%;
+        height: 90%;
+    }
+</style>
+
+<!-- Resources -->
+<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/map.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/geodata/continentsLow.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+
+
+<div id="chartdiv"></div>
+
+<!-- Chart code -->
+<script>
+    /**
+     * ---------------------------------------
+     * This demo was created using amCharts 5.
+     *
+     * For more information visit:
+     * https://www.amcharts.com/
+     *
+     * Documentation is available at:
+     * https://www.amcharts.com/docs/v5/
+     * ---------------------------------------
+     */
+    let charts = [];
+    let songs = [];
+
+    function getSongs() {
+        return $.getJSON('artists.json', function(data) {
+            $.each( data, function( key, val ) {
+                if (songs[val.album_released_country] === undefined) {
+                    songs[val.album_released_country] = [];
+                    songs[val.album_released_country]["unk"] = 0
+                    songs[val.album_released_country]["True"] = 0
+                    songs[val.album_released_country]["False"] = 0
+                    songs[val.album_released_country]["total"] = 0
+                }
+                songs[val.album_released_country][val.explicit_lyrics] += 1;
+                songs[val.album_released_country]["total"] += 1;
+            });
+        }).done(function() {
+            getCountries().then(generateMap);
+        });
+    }
+
+    function getCountries() {
+        return $.getJSON('countries.json', function(data) {
+            $.each( data, function( key, val ) {
+                if (songs[val.country] !== undefined) {
+                    charts.push({
+                        "title": "",
+                        "latitude": parseFloat(val.latitude),
+                        "longitude": parseFloat(val.longitude),
+                        "width": 30 + songs[val.country]["total"] / 100,
+                        "height": 30 + songs[val.country]["total"] / 100,
+                        "pieData": [{
+                            "category": "Explicit",
+                            "value": songs[val.country]["True"]
+                        }, {
+                            "category": "Not explicit",
+                            "value": songs[val.country]["False"]
+                        }, {
+                            "category": "Unknown",
+                            "value": songs[val.country]["unk"]
+                        }]
+                    })
+                }
+            });
+        });
+    }
+
+    // double then ne marche pas. N'attend pas que le getSongs se termine
+    // getSongs().then(getCountries().then(generateMap))
+
+    // ne marche pas non plus
+    /*
+    getSongs().then(function(){
+        console.log(songs)
+        return getCountries();
+    }).then(function(){
+        console.log(charts)
+        return generateMap();
+    })*/
+
+    //non plus
+    //getSongs().then(getCountries()).then(generateMap)
+
+
+    function generateMap() {
+        console.log(charts)
+        console.log(songs)
+        am5.ready(function() {
+
+
+            // Create root and chart
+            var root = am5.Root.new("chartdiv");
+
+            // Set themes
+            root.setThemes([
+                am5themes_Animated.new(root)
+            ]);
+
+
+            // ====================================
+            // Create map
+            // ====================================
+
+            var map = root.container.children.push(
+                am5map.MapChart.new(root, {
+                    panX: "rotateX",
+                    panY: "rotateY",
+                    projection: am5map.geoOrthographic(),
+                })
+            );
+            map.set("zoomControl", am5map.ZoomControl.new(root, {}));
+
+            // Create polygon series
+            let polygonSeries = map.series.push(
+                am5map.MapPolygonSeries.new(root, {
+                    geoJSON: am5geodata_worldLow
+                })
+            );
+
+
+
+            var pointSeries = map.series.push(
+                am5map.MapPointSeries.new(root, {
+                    // ...
+                })
+            );
+
+            pointSeries.bullets.push(function (root, series, x) {
+
+                var chartData = x.dataContext.data;
+
+                var chart = root.container.children.push(am5percent.PieChart.new(root, {
+                    width: chartData.width,
+                    height: chartData.height,
+                    radius: am5.p100,
+                    centerX: am5.p50,
+                    centerY: am5.p50,
+                    innerRadius: am5.percent(30)
+                }));
+
+                var series = chart.series.push(am5percent.PieSeries.new(root, {
+                    valueField: "value",
+                    categoryField: "category"
+                }));
+                series.get("colors").set("colors", [
+                    am5.color(0xfc0b03),
+                    am5.color(0x087f8c),
+                    am5.color(0x808080)
+                ]);
+
+                series.labels.template.set("forceHidden", true);
+                series.ticks.template.set("forceHidden", true);
+                series.data.setAll(chartData.pieData);
+
+                return am5.Bullet.new(root, {
+                    sprite: chart
+                });
+            });
+
+            pointSeries.bullets.push(function (root, series, x) {
+
+                var chartData = x.dataContext.data;
+
+                return am5.Bullet.new(root, {
+                    sprite: am5.Label.new(root, {
+                        text: chartData.title,
+                        centerX: am5.p50,
+                        centerY: am5.p100,
+                        dy: chartData.height * -0.5
+                    })
+                });
+            });
+
+
+            // ====================================
+            // Create pie charts
+            // ====================================
+            for (var i = 0; i < charts.length; i++) {
+                var chart = charts[i];
+                pointSeries.data.push({
+                    geometry: {type: "Point", coordinates: [chart.longitude, chart.latitude]},
+                    title: chart.title,
+                    data: chart
+                });
+            }
+
+
+            // add countries
+
+            polygonSeries.mapPolygons.template.setAll({
+                tooltipText: "{name}",
+                toggleKey: "active",
+                interactive: true,
+                stroke: am5.color(0x000000),
+                fill: am5.color(0xF4D03F),
+            });
+
+            polygonSeries.mapPolygons.template.states.create("hover", {
+                fill: am5.color(0x95eb34),
+            });
+
+            polygonSeries.mapPolygons.template.states.create("active", {
+                fill: am5.color(0xbaff61),
+            });
+
+
+
+
+            /////// click
+            var backgroundSeries = map.series.push(am5map.MapPolygonSeries.new(root, {}));
+            backgroundSeries.mapPolygons.template.setAll({
+                fill: root.interfaceColors.get("alternativeBackground"),
+                fillOpacity: 0.1,
+                strokeOpacity: 0,
+                stroke: am5.color(0xffffff),
+
+            });
+            backgroundSeries.data.push({
+                geometry: am5map.getGeoRectangle(90, 180, -90, -180)
+            });
+
+            var pointSeries2 = map.series.push(
+                am5map.MapPointSeries.new(root, {
+                    // ...
+                })
+            );
+
+            for (var i = 0; i < charts.length; i++) {
+                var chart = charts[i];
+                pointSeries2.data.push({
+                    geometry: { type: "Point", coordinates: [chart.longitude, chart.latitude] },
+                    title: chart.title,
+                    data: chart
+                });
+            }
+
+
+
+// Set up events
+            var previousPolygon;
+
+            polygonSeries.mapPolygons.template.on("active", function(active, target) {
+                if (previousPolygon && previousPolygon != target) {
+                    previousPolygon.set("active", false);
+                }
+                if (target.get("active")) {
+                    selectCountry(target.dataItem.get("id"));
+                }
+                previousPolygon = target;
+            });
+
+            function selectCountry(id) {
+                var dataItem = polygonSeries.getDataItemById(id);
+                var target = dataItem.get("mapPolygon");
+                if (target) {
+                    var centroid = target.geoCentroid();
+                    if (centroid) {
+                        map.animate({ key: "rotationX", to: -centroid.longitude, duration: 1500, easing: am5.ease.inOut(am5.ease.cubic) });
+                        map.animate({ key: "rotationY", to: -centroid.latitude, duration: 1500, easing: am5.ease.inOut(am5.ease.cubic) });
+                    }
+                }
+            }
+        });
+    }
+
+    getSongs()
+
+</script>
