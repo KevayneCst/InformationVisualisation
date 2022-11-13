@@ -1,0 +1,1220 @@
+{
+   "name":"all_genre",
+   "children":[
+      {
+         "name":"unknown",
+         "children":[
+            {
+               "name":"other_style",
+               "children":[
+                  {
+                     "name":"acoustic",
+                     "value":146
+                  },
+                  {
+                     "name":"chanson",
+                     "value":244
+                  },
+                  {
+                     "name":"medieval",
+                     "value":24
+                  },
+                  {
+                     "name":"freestyle",
+                     "value":40
+                  },
+                  {
+                     "name":"mixed",
+                     "value":34
+                  },
+                  {
+                     "name":"dark cabaret",
+                     "value":29
+                  },
+                  {
+                     "name":"cabaret&#x200e;",
+                     "value":14
+                  },
+                  {
+                     "name":"avant-garde",
+                     "value":107
+                  },
+                  {
+                     "name":"classical",
+                     "value":17
+                  },
+                  {
+                     "name":"contemporary christian",
+                     "value":631
+                  },
+                  {
+                     "name":"indie",
+                     "value":396
+                  },
+                  {
+                     "name":"industrial",
+                     "value":489
+                  },
+                  {
+                     "name":"merengue",
+                     "value":18
+                  },
+                  {
+                     "name":"native american",
+                     "value":13
+                  },
+                  {
+                     "name":"bolero",
+                     "value":12
+                  },
+                  {
+                     "name":"neue deutsche h&#xe4;rte",
+                     "value":53
+                  },
+                  {
+                     "name":"neue deutsche welle",
+                     "value":11
+                  },
+                  {
+                     "name":"norte&#xf1;o",
+                     "value":12
+                  },
+                  {
+                     "name":"soundtrack",
+                     "value":50
+                  },
+                  {
+                     "name":"crossover",
+                     "value":12
+                  },
+                  {
+                     "name":"crossover thrash",
+                     "value":38
+                  },
+                  {
+                     "name":"world music",
+                     "value":32
+                  },
+                  {
+                     "name":"schlager",
+                     "value":48
+                  },
+                  {
+                     "name":"christmas",
+                     "value":47
+                  },
+                  {
+                     "name":"singer-songwriter",
+                     "value":155
+                  },
+                  {
+                     "name":"comedy",
+                     "value":708
+                  },
+                  {
+                     "name":"parody",
+                     "value":18
+                  },
+                  {
+                     "name":"musical",
+                     "value":38
+                  }
+               ]
+            },
+            {
+               "name":"voice_style",
+               "children":[
+                  {
+                     "name":"vocal",
+                     "value":112
+                  },
+                  {
+                     "name":"spoken word",
+                     "value":15
+                  },
+                  {
+                     "name":"beatbox",
+                     "value":20
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "name":"electronic",
+         "children":[
+            {
+               "name":"industrial_style",
+               "children":[
+                  {
+                     "name":"aggrotech",
+                     "value":95
+                  },
+                  {
+                     "name":"ebm",
+                     "value":246
+                  },
+                  {
+                     "name":"edm",
+                     "value":24
+                  },
+                  {
+                     "name":"electronica",
+                     "value":301
+                  },
+                  {
+                     "name":"chiptune",
+                     "value":10
+                  },
+                  {
+                     "name":"techno",
+                     "value":10
+                  },
+                  {
+                     "name":"indietronica",
+                     "value":10
+                  },
+                  {
+                     "name":"experimental",
+                     "value":110
+                  },
+                  {
+                     "name":"drum and bass",
+                     "value":84
+                  }
+               ]
+            },
+            {
+               "name":"house_style",
+               "children":[
+                  {
+                     "name":"electro house",
+                     "value":129
+                  },
+                  {
+                     "name":"hip house",
+                     "value":54
+                  },
+                  {
+                     "name":"house",
+                     "value":17
+                  },
+                  {
+                     "name":"progressive house",
+                     "value":13
+                  }
+               ]
+            },
+            {
+               "name":"ambient_style",
+               "children":[
+                  {
+                     "name":"ambient",
+                     "value":33
+                  },
+                  {
+                     "name":"glitch",
+                     "value":12
+                  },
+                  {
+                     "name":"downtempo",
+                     "value":11
+                  }
+               ]
+            },
+            {
+               "name":"disco_style",
+               "children":[
+                  {
+                     "name":"disco",
+                     "value":67
+                  },
+                  {
+                     "name":"italo disco",
+                     "value":26
+                  },
+                  {
+                     "name":"eurodance",
+                     "value":141
+                  },
+                  {
+                     "name":"europop",
+                     "value":13
+                  },
+                  {
+                     "name":"alternative dance",
+                     "value":23
+                  },
+                  {
+                     "name":"dance",
+                     "value":248
+                  },
+                  {
+                     "name":"idm",
+                     "value":12
+                  }
+               ]
+            },
+            {
+               "name":"breakbeat_style",
+               "children":[
+                  {
+                     "name":"breakbeat",
+                     "value":15
+                  },
+                  {
+                     "name":"big beat",
+                     "value":54
+                  },
+                  {
+                     "name":"dubstep",
+                     "value":122
+                  },
+                  {
+                     "name":"rave",
+                     "value":34
+                  },
+                  {
+                     "name":"new rave",
+                     "value":23
+                  },
+                  {
+                     "name":"trance",
+                     "value":48
+                  }
+               ]
+            },
+            {
+               "name":"electro_style",
+               "children":[
+                  {
+                     "name":"electronicore",
+                     "value":7
+                  },
+                  {
+                     "name":"electronic",
+                     "value":866
+                  },
+                  {
+                     "name":"electroclash",
+                     "value":38
+                  },
+                  {
+                     "name":"electro",
+                     "value":45
+                  },
+                  {
+                     "name":"dark electro",
+                     "value":34
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "name":"rock",
+         "children":[
+            {
+               "name":"heavy_metal_style",
+               "children":[
+                  {
+                     "name":"deathcore",
+                     "value":301
+                  },
+                  {
+                     "name":"goregrind",
+                     "value":79
+                  },
+                  {
+                     "name":"grindcore",
+                     "value":435
+                  },
+                  {
+                     "name":"black metal",
+                     "value":739
+                  },
+                  {
+                     "name":"death &apos;n&apos; roll",
+                     "value":9
+                  },
+                  {
+                     "name":"alternative metal",
+                     "value":814
+                  },
+                  {
+                     "name":"thrash metal",
+                     "value":1005
+                  },
+                  {
+                     "name":"brutal death metal",
+                     "value":52
+                  },
+                  {
+                     "name":"nu metal",
+                     "value":682
+                  },
+                  {
+                     "name":"death metal",
+                     "value":1153
+                  },
+                  {
+                     "name":"deathrock",
+                     "value":22
+                  },
+                  {
+                     "name":"progressive death metal",
+                     "value":44
+                  },
+                  {
+                     "name":"melodic death metal",
+                     "value":271
+                  },
+                  {
+                     "name":"technical death metal",
+                     "value":31
+                  },
+                  {
+                     "name":"avant-garde metal",
+                     "value":20
+                  },
+                  {
+                     "name":"christian metal",
+                     "value":10
+                  },
+                  {
+                     "name":"doom metal",
+                     "value":269
+                  },
+                  {
+                     "name":"dark metal",
+                     "value":13
+                  },
+                  {
+                     "name":"extreme metal",
+                     "value":71
+                  },
+                  {
+                     "name":"gothic metal",
+                     "value":512
+                  },
+                  {
+                     "name":"groove metal",
+                     "value":264
+                  },
+                  {
+                     "name":"industrial metal",
+                     "value":441
+                  },
+                  {
+                     "name":"melodic metalcore",
+                     "value":5
+                  },
+                  {
+                     "name":"heavy metal",
+                     "value":2054
+                  },
+                  {
+                     "name":"metalcore",
+                     "value":773
+                  },
+                  {
+                     "name":"power metal",
+                     "value":336
+                  },
+                  {
+                     "name":"rap metal",
+                     "value":146
+                  },
+                  {
+                     "name":"rap  metal",
+                     "value":18
+                  },
+                  {
+                     "name":"symphonic metal",
+                     "value":340
+                  },
+                  {
+                     "name":"speed metal",
+                     "value":135
+                  },
+                  {
+                     "name":"sludge metal",
+                     "value":30
+                  },
+                  {
+                     "name":"progressive metal",
+                     "value":397
+                  },
+                  {
+                     "name":"pirate metal",
+                     "value":45
+                  },
+                  {
+                     "name":"glam metal",
+                     "value":95
+                  },
+                  {
+                     "name":"viking metal",
+                     "value":45
+                  },
+                  {
+                     "name":"symphonic black metal",
+                     "value":35
+                  },
+                  {
+                     "name":"mathcore",
+                     "value":34
+                  },
+                  {
+                     "name":"happy hardcore",
+                     "value":35
+                  },
+                  {
+                     "name":"digital hardcore",
+                     "value":20
+                  },
+                  {
+                     "name":"melodic hardcore",
+                     "value":118
+                  },
+                  {
+                     "name":"post-hardcore",
+                     "value":662
+                  }
+               ]
+            },
+            {
+               "name":"rock_style",
+               "children":[
+                  {
+                     "name":"lo-fi",
+                     "value":17
+                  },
+                  {
+                     "name":"shoegazing",
+                     "value":10
+                  },
+                  {
+                     "name":"rio",
+                     "value":11
+                  },
+                  {
+                     "name":"jovem guarda",
+                     "value":12
+                  },
+                  {
+                     "name":"grunge",
+                     "value":158
+                  },
+                  {
+                     "name":"canterbury",
+                     "value":7
+                  },
+                  {
+                     "name":"post-grunge",
+                     "value":48
+                  },
+                  {
+                     "name":"britpop",
+                     "value":20
+                  },
+                  {
+                     "name":"alternative rock",
+                     "value":4496
+                  },
+                  {
+                     "name":"art rock",
+                     "value":37
+                  },
+                  {
+                     "name":"soft rock",
+                     "value":8
+                  },
+                  {
+                     "name":"celtic rock",
+                     "value":16
+                  },
+                  {
+                     "name":"blues rock",
+                     "value":104
+                  },
+                  {
+                     "name":"country rock",
+                     "value":65
+                  },
+                  {
+                     "name":"comedy rock",
+                     "value":108
+                  },
+                  {
+                     "name":"electronic rock",
+                     "value":241
+                  },
+                  {
+                     "name":"experimental rock",
+                     "value":130
+                  },
+                  {
+                     "name":"folk rock",
+                     "value":306
+                  },
+                  {
+                     "name":"garage rock",
+                     "value":173
+                  },
+                  {
+                     "name":"glam rock",
+                     "value":129
+                  },
+                  {
+                     "name":"hard rock",
+                     "value":1124
+                  },
+                  {
+                     "name":"krautrock",
+                     "value":10
+                  },
+                  {
+                     "name":"industrial rock",
+                     "value":561
+                  },
+                  {
+                     "name":"gothic rock",
+                     "value":106
+                  },
+                  {
+                     "name":"indie rock",
+                     "value":1435
+                  },
+                  {
+                     "name":"noise rock",
+                     "value":78
+                  },
+                  {
+                     "name":"post-rock",
+                     "value":32
+                  },
+                  {
+                     "name":"j-rock",
+                     "value":97
+                  },
+                  {
+                     "name":"pop rock",
+                     "value":946
+                  },
+                  {
+                     "name":"math rock",
+                     "value":5
+                  },
+                  {
+                     "name":"instrumental rock",
+                     "value":32
+                  },
+                  {
+                     "name":"rap rock",
+                     "value":145
+                  },
+                  {
+                     "name":"psychedelic rock",
+                     "value":109
+                  },
+                  {
+                     "name":"latin rock",
+                     "value":40
+                  },
+                  {
+                     "name":"rock",
+                     "value":3745
+                  },
+                  {
+                     "name":"rock &apos;n&apos; roll",
+                     "value":60
+                  },
+                  {
+                     "name":"southern rock",
+                     "value":97
+                  },
+                  {
+                     "name":"stoner rock",
+                     "value":64
+                  },
+                  {
+                     "name":"progressive rock",
+                     "value":268
+                  }
+               ]
+            },
+            {
+               "name":"funk_style",
+               "children":[
+                  {
+                     "name":"g-funk",
+                     "value":83
+                  },
+                  {
+                     "name":"funk",
+                     "value":154
+                  },
+                  {
+                     "name":"funk metal",
+                     "value":37
+                  },
+                  {
+                     "name":"funk rock",
+                     "value":108
+                  }
+               ]
+            },
+            {
+               "name":"punk_style",
+               "children":[
+                  {
+                     "name":"emo",
+                     "value":107
+                  },
+                  {
+                     "name":"screamo",
+                     "value":36
+                  },
+                  {
+                     "name":"gothic",
+                     "value":87
+                  },
+                  {
+                     "name":"powerviolence",
+                     "value":39
+                  },
+                  {
+                     "name":"riot grrrl",
+                     "value":25
+                  },
+                  {
+                     "name":"dark wave",
+                     "value":88
+                  },
+                  {
+                     "name":"new wave",
+                     "value":101
+                  },
+                  {
+                     "name":"queercore",
+                     "value":77
+                  },
+                  {
+                     "name":"anarcho-punk",
+                     "value":184
+                  },
+                  {
+                     "name":"crust punk",
+                     "value":11
+                  },
+                  {
+                     "name":"folk punk",
+                     "value":73
+                  },
+                  {
+                     "name":"deutschpunk",
+                     "value":4
+                  },
+                  {
+                     "name":"electropunk",
+                     "value":13
+                  },
+                  {
+                     "name":"garage punk",
+                     "value":20
+                  },
+                  {
+                     "name":"hardcore punk",
+                     "value":1735
+                  },
+                  {
+                     "name":"garage punk",
+                     "value":20
+                  },
+                  {
+                     "name":"horror punk",
+                     "value":134
+                  },
+                  {
+                     "name":"gypsy punk",
+                     "value":6
+                  },
+                  {
+                     "name":"oi-punk",
+                     "value":80
+                  },
+                  {
+                     "name":"pop punk",
+                     "value":649
+                  },
+                  {
+                     "name":"post-punk",
+                     "value":156
+                  },
+                  {
+                     "name":"post-punk&#x200e;",
+                     "value":8
+                  },
+                  {
+                     "name":"punk cabaret",
+                     "value":23
+                  },
+                  {
+                     "name":"punk rock",
+                     "value":3823
+                  },
+                  {
+                     "name":"ska punk",
+                     "value":258
+                  },
+                  {
+                     "name":"skate punk",
+                     "value":44
+                  },
+                  {
+                     "name":"steampunk",
+                     "value":11
+                  },
+                  {
+                     "name":"street punk",
+                     "value":16
+                  },
+                  {
+                     "name":"punk blues",
+                     "value":11
+                  },
+                  {
+                     "name":"dance punk",
+                     "value":72
+                  },
+                  {
+                     "name":"psychobilly",
+                     "value":107
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "name":"hiphop",
+         "children":[
+            {
+               "name":"crunk_style",
+               "children":[
+                  {
+                     "name":"crunk",
+                     "value":369
+                  },
+                  {
+                     "name":"crunkcore",
+                     "value":60
+                  },
+                  {
+                     "name":"trap",
+                     "value":10
+                  }
+               ]
+            },
+            {
+               "name":"hip_hop_style",
+               "children":[
+                  {
+                     "name":"alternative hip hop",
+                     "value":940
+                  },
+                  {
+                     "name":"french hip hop",
+                     "value":60
+                  },
+                  {
+                     "name":"australian hip hop",
+                     "value":212
+                  },
+                  {
+                     "name":"horrorcore",
+                     "value":393
+                  },
+                  {
+                     "name":"trip hop",
+                     "value":93
+                  },
+                  {
+                     "name":"christian hip hop",
+                     "value":9
+                  },
+                  {
+                     "name":"experimental hip hop",
+                     "value":78
+                  },
+                  {
+                     "name":"east coast hip hop",
+                     "value":925
+                  },
+                  {
+                     "name":"west coast hip hop",
+                     "value":1224
+                  },
+                  {
+                     "name":"hip hop",
+                     "value":21129
+                  },
+                  {
+                     "name":"hardcore hip hop",
+                     "value":400
+                  },
+                  {
+                     "name":"political hip hop",
+                     "value":17
+                  },
+                  {
+                     "name":"nerdcore hip hop",
+                     "value":86
+                  },
+                  {
+                     "name":"southern hip hop",
+                     "value":2087
+                  },
+                  {
+                     "name":"underground hip hop",
+                     "value":345
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "name":"jazz",
+         "children":[
+            {
+               "name":"jazz_style",
+               "children":[
+                  {
+                     "name":"jazz",
+                     "value":120
+                  },
+                  {
+                     "name":"jazz fusion",
+                     "value":26
+                  },
+                  {
+                     "name":"vocal jazz",
+                     "value":14
+                  },
+                  {
+                     "name":"afrobeat",
+                     "value":2
+                  },
+                  {
+                     "name":"swing",
+                     "value":14
+                  }
+               ]
+            },
+            {
+               "name":"blues_style",
+               "children":[
+                  {
+                     "name":"blues",
+                     "value":168
+                  },
+                  {
+                     "name":"country blues",
+                     "value":12
+                  },
+                  {
+                     "name":"doo-wop",
+                     "value":10
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "name":"country",
+         "children":[
+            {
+               "name":"country_style",
+               "children":[
+                  {
+                     "name":"country",
+                     "value":586
+                  },
+                  {
+                     "name":"sertanejo",
+                     "value":52
+                  },
+                  {
+                     "name":"americana",
+                     "value":47
+                  },
+                  {
+                     "name":"alternative country",
+                     "value":27
+                  },
+                  {
+                     "name":"bakersfield sound",
+                     "value":10
+                  },
+                  {
+                     "name":"bluegrass",
+                     "value":5
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "name":"folk",
+         "children":[
+            {
+               "name":"folk_style",
+               "children":[
+                  {
+                     "name":"filk",
+                     "value":4
+                  },
+                  {
+                     "name":"anti-folk",
+                     "value":66
+                  },
+                  {
+                     "name":"contemporary folk",
+                     "value":13
+                  },
+                  {
+                     "name":"folk",
+                     "value":596
+                  },
+                  {
+                     "name":"folk metal",
+                     "value":424
+                  },
+                  {
+                     "name":"irish folk",
+                     "value":20
+                  },
+                  {
+                     "name":"indie folk",
+                     "value":166
+                  },
+                  {
+                     "name":"neofolk",
+                     "value":27
+                  },
+                  {
+                     "name":"psych folk",
+                     "value":11
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "name":"reggae",
+         "children":[
+            {
+               "name":"reggae_style",
+               "children":[
+                  {
+                     "name":"reggae",
+                     "value":452
+                  },
+                  {
+                     "name":"reggae fusion",
+                     "value":40
+                  },
+                  {
+                     "name":"reggaeton",
+                     "value":184
+                  },
+                  {
+                     "name":"ska",
+                     "value":215
+                  },
+                  {
+                     "name":"dancehall",
+                     "value":62
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "name":"samba",
+         "children":[
+            {
+               "name":"samba_style",
+               "children":[
+                  {
+                     "name":"samba",
+                     "value":2
+                  },
+                  {
+                     "name":"bossa nova",
+                     "value":11
+                  },
+                  {
+                     "name":"mpb",
+                     "value":90
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "name":"rnbsoul",
+         "children":[
+            {
+               "name":"r&b_soul_style",
+               "children":[
+                  {
+                     "name":"blue-eyed soul",
+                     "value":15
+                  },
+                  {
+                     "name":"neo soul&#x200e;",
+                     "value":12
+                  },
+                  {
+                     "name":"neo soul",
+                     "value":146
+                  },
+                  {
+                     "name":"soul",
+                     "value":265
+                  },
+                  {
+                     "name":"r&amp;b",
+                     "value":2732
+                  },
+                  {
+                     "name":"gospel",
+                     "value":36
+                  },
+                  {
+                     "name":"worship",
+                     "value":57
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "name":"pop",
+         "children":[
+            {
+               "name":"pop_style",
+               "children":[
+                  {
+                     "name":"baroque pop",
+                     "value":48
+                  },
+                  {
+                     "name":"classic pop",
+                     "value":42
+                  },
+                  {
+                     "name":"electropop",
+                     "value":185
+                  },
+                  {
+                     "name":"grime",
+                     "value":210
+                  },
+                  {
+                     "name":"dream pop",
+                     "value":54
+                  },
+                  {
+                     "name":"french pop",
+                     "value":152
+                  },
+                  {
+                     "name":"indie pop",
+                     "value":558
+                  },
+                  {
+                     "name":"adult contemporary",
+                     "value":57
+                  },
+                  {
+                     "name":"noise pop",
+                     "value":13
+                  },
+                  {
+                     "name":"power pop",
+                     "value":107
+                  },
+                  {
+                     "name":"pop",
+                     "value":1867
+                  },
+                  {
+                     "name":"pop rock&#x200e;",
+                     "value":15
+                  },
+                  {
+                     "name":"j-pop",
+                     "value":16
+                  },
+                  {
+                     "name":"dance-pop",
+                     "value":106
+                  },
+                  {
+                     "name":"teen pop",
+                     "value":36
+                  },
+                  {
+                     "name":"psychedelic pop",
+                     "value":21
+                  },
+                  {
+                     "name":"latin pop",
+                     "value":181
+                  },
+                  {
+                     "name":"k-pop",
+                     "value":5
+                  },
+                  {
+                     "name":"synthpop",
+                     "value":431
+                  },
+                  {
+                     "name":"futurepop",
+                     "value":39
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "name":"rap",
+         "children":[
+            {
+               "name":"rap_style",
+               "children":[
+                  {
+                     "name":"gangsta rap",
+                     "value":1839
+                  },
+                  {
+                     "name":"j-rap",
+                     "value":16
+                  },
+                  {
+                     "name":"midwest rap",
+                     "value":350
+                  },
+                  {
+                     "name":"rapcore",
+                     "value":25
+                  }
+               ]
+            }
+         ]
+      }
+   ]
+}
