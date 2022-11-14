@@ -102,8 +102,6 @@
 
 
     function generateMap() {
-        console.log(charts)
-        console.log(songs)
         am5.ready(function() {
 
 
@@ -170,6 +168,15 @@
                 series.labels.template.set("forceHidden", true);
                 series.ticks.template.set("forceHidden", true);
                 series.data.setAll(chartData.pieData);
+
+                //event for select only one chart
+                series.slices.template.events.on("click", function(ev) {
+                    series.slices.each(function(slice) {
+                        if (slice != ev.target && slice.get("active")) {
+                            slice.set("active", false);
+                        }
+                    })
+                });
 
                 return am5.Bullet.new(root, {
                     sprite: chart

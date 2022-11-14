@@ -30,15 +30,34 @@
         display: block;
         text-decoration: none;
     }
+
+    .form-label{
+        color: #fff;
+    }
+    .range{
+        text-align: center;
+        display: flex;
+        flex-flow: column wrap;
+        margin-top: 10px;
+    }
 </style>
 
 <!-- Resources -->
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+<script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"
+></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js" integrity="sha512-hZf9Qhp3rlDJBvAKvmiG+goaaKRZA6LKUO35oK6EsM0/kjPK32Yw7URqrq3Q+Nvbbt8Usss+IekL7CRn83dYmw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<h1>Graphique représentant le caractère des chansons par artiste</h1>
+<h1>Graphique représentant le caractère des chansons par tranche de 10 artistes</h1>
 <div class="wrapper">
     <canvas id="myChart4"></canvas>
+</div>
+<div class="range">
+    <label id="range-label" class="form-label" for="customRange1">Vous avez choisi d'afficher les artistes de </label>
+    <label id="range-show" class="form-label" for="customRange1">1 à 10</label>
+    <input type="range" class="form-range" id="customRange1" min="10" max="1100" step="10" value="10"/>
 </div>
 
 
@@ -48,13 +67,14 @@
     let songsSorted = [];
 
     function generateChart() {
-        console.log(songsSorted)
         var ctx = document.getElementById("myChart4").getContext('2d');
         let labels = [];
         let explicit = [];
         let notExplicit = [];
         let unknown = [];
-        for (let i = 0; i < 10; ++i) {
+        let range = $("#customRange1").val();
+
+        for (let i = range - 10; i < range && i<songsSorted.length; ++i) {
             labels.push(songsSorted[i]["name"])
             unknown.push(songsSorted[i]["unk"])
             explicit.push(songsSorted[i]["True"])
@@ -142,8 +162,14 @@
         });
     }
 
-
-
     getSongs()
 
+    $("#customRange1").on("change", function() {
+        let n = $(this).val();
+        let s = n-9;
+        s += " à ";
+        s += n;
+        $("#range-show").text(s);
+        generateChart()
+    });
 </script>
