@@ -5,7 +5,7 @@ j'ai écrit un script qui génère un fichier json en prenant en compte la hiér
 Je fournis le json à d3js qui établie la visualisation sunburst
 """
 
-data = pd.read_csv('final.csv')
+data = pd.read_csv('genre_counted.csv')
 genres  = data['genre_album'].unique()
 lvl1 = [genre.lower() for genre in genres]
 lvl1 = sorted(lvl1)
