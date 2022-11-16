@@ -7,3 +7,8 @@ La base du projet concerne les musiques contenant des insultes en se basant sur 
 ## Projets de visualisation personnelles
 
 - [Genre musicaux](https://github.com/KevayneCst/InformationVisualisation/tree/main/musical_genre) : Kévin Constantin
+
+## Colab de prétraitement
+
+prétraitement de donnée réaliser avec PySpark
+- [Documentation](https://spark.apache.org/docs/latest/api/python/index.html) pour Pyspark
