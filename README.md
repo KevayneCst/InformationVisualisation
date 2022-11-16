@@ -7,6 +7,8 @@ La base du projet concerne les musiques contenant des insultes en se basant sur 
 ## Projets de visualisation personnelles
 
 - [Genre musicaux](https://github.com/KevayneCst/InformationVisualisation/tree/main/musical_genre) : Kévin Constantin
+- [Artist](https://github.com/KevayneCst/InformationVisualisation/tree/main/Visualisation)
+- [Album](https://github.com/KevayneCst/InformationVisualisation/tree/main/Visualisation)
 
 ## Colab de prétraitement
 
