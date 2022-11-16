@@ -12,3 +12,5 @@ La base du projet concerne les musiques contenant des insultes en se basant sur 
 
 prétraitement de donnée réaliser avec PySpark
 - [Documentation](https://spark.apache.org/docs/latest/api/python/index.html) pour Pyspark
+- [code source](https://colab.research.google.com/drive/1TKdsbWEhb8rgO_JKfP7ApziJhNeELyUZ?usp=sharing)
+- [liens](https://drive.google.com/drive/folders/1ePpY_IE1n6qGdBVwKJ5nB-aTsSxOVqUK?usp=sharing) du drive
